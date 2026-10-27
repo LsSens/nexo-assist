@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #ffffff;
+  --desk: #f6f7f9;
+  --ink: #1b2431;
+  --ink-2: #3d4656;
+  --ink-3: #5b6472;
+  --rule: #e6e8ec;
+  --cta: #0062c4;
+  --primary-soft: #0285f712;
+  --primary-text: #0069c7;
+  --success: #00bd6c;
+  --success-soft: #00bd6c14;
+  --success-text: #00804a;
+  --warning-soft: #f5a50018;
+  --warning-text: #946300;
+  --danger: #ee343b;
+  --danger-soft: #ee343b12;
+  --danger-text: #c4161d;
+  --chat: #eef1f5;
+  --agent: #e6effa;
+  --human: #e3f4ea;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-ui);
+  --font-display: var(--font-newsreader);
+  --font-mono: var(--font-plex);
+  --color-paper: var(--paper);
+  --color-desk: var(--desk);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-rule: var(--rule);
+  --color-cta: var(--cta);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-text: var(--primary-text);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-success-text: var(--success-text);
+  --color-warning-soft: var(--warning-soft);
+  --color-warning-text: var(--warning-text);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-danger-text: var(--danger-text);
+  --color-chat: var(--chat);
+  --color-agent: var(--agent);
+  --color-human: var(--human);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-ui), sans-serif;
 }
+
+button, input, textarea { font: inherit; }
+
+button { cursor: pointer; }
+
+::selection { background: #cfe6fb; }
